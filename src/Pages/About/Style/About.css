@@ -1,0 +1,14 @@
+#about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+#about .page-description .content {
+  background: linear-gradient(127.01deg, rgba(213, 213, 213, 0.0975) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.5);
+}
+#about .page-description .content:hover {
+  background: linear-gradient(127.01deg, rgba(213, 213, 213, 0.1) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.85);
+}
+#about .desc-container {
+  display: flex;
+}/*# sourceMappingURL=About.css.map */

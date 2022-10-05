@@ -1,0 +1,72 @@
+$gray1: #f2f2f2
+$gray2: #E0E0E0
+$gray3: #BDBDBD
+$gray4: #828282
+$gray5: #4F4F4F
+$gray6: #333333
+$gray7: #262626
+$gray8: #1D1D1D
+$gray9: #0E0E10
+$transparent: rgb(0,0,0,0)
+$shadow-light: rgb(0,0,0,.3)
+$shadow-dark: rgb(0,0,0,.8)
+
+$gradient-line270: linear-gradient(270deg, #0E0E10 34.7%, rgba(14, 14, 16, 0) 100%)
+$gradient-line90: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)
+$gradient-transparent: linear-gradient(127.01deg, rgba(213, 213, 213, 0) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0)
+$gradient-light: linear-gradient(127.01deg, rgba(213, 213, 213, 0.0975) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.5)
+$gradient: linear-gradient(127.01deg, rgba(213, 213, 213, 0.1) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.85)
+$gradient-dark: linear-gradient(270deg, #0E0E10 34.7%, rgba(14, 14, 16, 0) 100%)
+$gradient-black: linear-gradient(270deg, #0E0E10 34.7%, rgba(14, 14, 16, 0) 100%)
+
+$primary: #C81B10
+$secondary: #FBD016
+
+$tank: #3A4CA6
+$healer: #3C672F
+$dps: #733232
+$craft: #6547AA
+$gather: #A28838
+
+$barlow-condensed: 'Barlow Condensed', sans-serif
+$barlow: 'Barlow', sans-serif
+
+@mixin gray-element
+    transition: 1s
+    background: $gradient
+    outline: solid 1px $gray5
+    border-radius: .5rem
+
+@mixin gray-box-big
+    transition: 1s
+    padding: 2rem
+    background: $gradient
+    outline: solid 1px $gray5
+    border-radius: 1rem
+
+@mixin gray-box-med
+    transition: 1s
+    padding: 1rem
+    background: $gradient
+    outline: solid 1px $gray5
+    border-radius: .5rem
+
+@mixin gray-box-sml
+    transition: 1s
+    padding: .5rem
+    color: $gray1
+    background: $gradient
+    outline: solid 1px $gray5
+    border-radius: .5rem
+
+@mixin active-box
+    transition: .2s
+    color: $secondary
+    background: $secondary
+    outline: solid 1px $secondary
+
+@mixin flex-centerall
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 1rem

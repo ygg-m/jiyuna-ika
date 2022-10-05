@@ -1,0 +1,207 @@
+@use '../../../Styles/variables' as v
+
+.page-container
+    justify-content: flex-end
+    .page-description
+        .content
+            margin-left: 1rem
+            background: v.$gradient-light
+            outline: solid 1px v.$gray5
+
+            .name
+                display: flex
+                align-items: flex-start
+                height: fit-content
+                text-transform: uppercase
+
+                font:
+                    family: v.$barlow-condensed
+                    size: 2rem
+                    weight: 100
+
+            .desc
+                color: v.$gray2
+
+    .house-rooms
+        z-index: 5
+        transition: 1s
+        position: fixed
+        top: 0
+        left: 0
+        height: 100vh
+        max-width: 48px
+        padding: 1rem 0
+        overflow: hidden
+
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: 1rem
+
+        outline: solid 1px v.$gray6
+        background: v.$gradient
+
+        h4
+            color: v.$gray4
+            font:
+                size: 1.5rem
+                family: v.$barlow-condensed
+                weight: 100
+            text-transform: uppercase
+            letter-spacing: 1px
+            text-align: center
+
+        .rooms-container
+            height: 100%
+            width: 1vw
+            overflow-y: scroll
+            transition: 1s
+            padding: 2rem
+            opacity: 0
+            border-radius: 1rem
+
+            display: flex
+            justify-content: center
+            align-content: flex-start
+            flex-wrap: wrap
+            gap: 1rem
+
+            background: v.$gradient-line90
+            outline: solid 1px v.$gray7
+
+            &::-webkit-scrollbar
+                width: 1rem
+
+            &::-webkit-scrollbar-track
+                margin-right: 1rem
+                background: v.$gray6
+                border-radius: 1rem
+
+            &::-webkit-scrollbar-thumb
+                background: #888
+                border-radius: 1rem
+
+            &::-webkit-scrollbar-thumb:hover
+                background: #555
+                border-radius: 1rem
+
+            &:hover
+                width: 27vw
+                .room
+                    opacity: .8
+
+            .room
+                position: relative
+                transition: 1s
+                width: 11rem
+
+                border-radius: 1rem
+                overflow: hidden
+
+                outline: solid 1px v.$gray5
+                box-shadow: 0 4px 4px v.$shadow-dark
+
+                &:hover
+                    transition: .2s
+                    opacity: 1
+                    outline: solid 1px v.$secondary
+                    cursor: pointer
+                    .name
+                        bottom: 0
+                        opacity: 1
+                        transition: .2s
+                        color: v.$secondary
+                        outline: solid 1px v.$secondary
+                    .room-number
+                        top: 0
+                        opacity: 1
+                        transition: .2s
+                        color: v.$secondary
+                        outline: solid 1px v.$secondary
+
+                .room-number
+                    transition: 1s
+                    position: absolute
+                    top: -1rem
+                    width: 100%
+                    padding: .2rem
+                    opacity: 0
+
+                    font:
+                        family: v.$barlow-condensed
+
+                    text-transform: uppercase
+                    text-shadow: 0 2px 2px v.$shadow-dark
+                    letter-spacing: 1px
+
+                    display: flex
+                    align-items: center
+                    justify-content: center
+
+                    background: v.$gradient
+                    outline: solid 1px v.$gray5
+
+                .name
+                    transition: 1s
+                    position: absolute
+                    bottom: -1rem
+                    width: 100%
+                    padding: .2rem
+                    opacity: 0
+
+                    font:
+                        family: v.$barlow-condensed
+
+                    text-transform: uppercase
+                    text-shadow: 0 2px 2px v.$shadow-dark
+                    letter-spacing: 1px
+
+                    display: flex
+                    align-items: center
+                    justify-content: center
+
+                    background: v.$gradient
+                    outline: solid 1px v.$gray5
+
+        &:hover
+            padding: 1rem
+            transition: .2s
+            max-width: 30vw
+
+            .rooms-container
+                transition: .2s
+                opacity: .8
+
+        .button
+            min-width: 32px
+            max-width: 300px
+            font-size: 1rem
+            transition: .2s
+
+            transition: 1s
+            width: 100%
+            padding: .5rem
+            border-radius: 1rem
+
+            display: flex
+            align-items: center
+            justify-content: center
+
+            text-transform: uppercase
+
+            background: v.$gradient
+            outline: solid 1px v.$gray5
+
+            font:
+                family: v.$barlow-condensed
+
+            letter-spacing: 1px
+
+            &:hover
+                cursor: pointer
+                color: v.$secondary
+                background: v.$gradient
+                outline: solid 1px v.$secondary
+
+        .button

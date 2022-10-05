@@ -1,0 +1,183 @@
+.page-container {
+  justify-content: flex-end;
+}
+.page-container .page-description .content {
+  margin-left: 1rem;
+  background: linear-gradient(127.01deg, rgba(213, 213, 213, 0.0975) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.5);
+  outline: solid 1px #4F4F4F;
+}
+.page-container .page-description .content .name {
+  display: flex;
+  align-items: flex-start;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.page-container .page-description .content .desc {
+  color: #E0E0E0;
+}
+.page-container .house-rooms {
+  z-index: 5;
+  transition: 1s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  max-width: 48px;
+  padding: 1rem 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  outline: solid 1px #333333;
+  background: linear-gradient(127.01deg, rgba(213, 213, 213, 0.1) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.85);
+}
+.page-container .house-rooms h4 {
+  color: #828282;
+  font-size: 1.5rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.page-container .house-rooms .rooms-container {
+  height: 100%;
+  width: 1vw;
+  overflow-y: scroll;
+  transition: 1s;
+  padding: 2rem;
+  opacity: 0;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+  outline: solid 1px #262626;
+}
+.page-container .house-rooms .rooms-container::-webkit-scrollbar {
+  width: 1rem;
+}
+.page-container .house-rooms .rooms-container::-webkit-scrollbar-track {
+  margin-right: 1rem;
+  background: #333333;
+  border-radius: 1rem;
+}
+.page-container .house-rooms .rooms-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 1rem;
+}
+.page-container .house-rooms .rooms-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-radius: 1rem;
+}
+.page-container .house-rooms .rooms-container:hover {
+  width: 27vw;
+}
+.page-container .house-rooms .rooms-container:hover .room {
+  opacity: 0.8;
+}
+.page-container .house-rooms .rooms-container .room {
+  position: relative;
+  transition: 1s;
+  width: 11rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  outline: solid 1px #4F4F4F;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+}
+.page-container .house-rooms .rooms-container .room:hover {
+  transition: 0.2s;
+  opacity: 1;
+  outline: solid 1px #FBD016;
+  cursor: pointer;
+}
+.page-container .house-rooms .rooms-container .room:hover .name {
+  bottom: 0;
+  opacity: 1;
+  transition: 0.2s;
+  color: #FBD016;
+  outline: solid 1px #FBD016;
+}
+.page-container .house-rooms .rooms-container .room:hover .room-number {
+  top: 0;
+  opacity: 1;
+  transition: 0.2s;
+  color: #FBD016;
+  outline: solid 1px #FBD016;
+}
+.page-container .house-rooms .rooms-container .room .room-number {
+  transition: 1s;
+  position: absolute;
+  top: -1rem;
+  width: 100%;
+  padding: 0.2rem;
+  opacity: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(127.01deg, rgba(213, 213, 213, 0.1) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.85);
+  outline: solid 1px #4F4F4F;
+}
+.page-container .house-rooms .rooms-container .room .name {
+  transition: 1s;
+  position: absolute;
+  bottom: -1rem;
+  width: 100%;
+  padding: 0.2rem;
+  opacity: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(127.01deg, rgba(213, 213, 213, 0.1) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.85);
+  outline: solid 1px #4F4F4F;
+}
+.page-container .house-rooms:hover {
+  padding: 1rem;
+  transition: 0.2s;
+  max-width: 30vw;
+}
+.page-container .house-rooms:hover .rooms-container {
+  transition: 0.2s;
+  opacity: 0.8;
+}
+.page-container .house-rooms .button {
+  min-width: 32px;
+  max-width: 300px;
+  font-size: 1rem;
+  transition: 0.2s;
+  transition: 1s;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background: linear-gradient(127.01deg, rgba(213, 213, 213, 0.1) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.85);
+  outline: solid 1px #4F4F4F;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 1px;
+}
+.page-container .house-rooms .button:hover {
+  cursor: pointer;
+  color: #FBD016;
+  background: linear-gradient(127.01deg, rgba(213, 213, 213, 0.1) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.85);
+  outline: solid 1px #FBD016;
+}/*# sourceMappingURL=House.css.map */

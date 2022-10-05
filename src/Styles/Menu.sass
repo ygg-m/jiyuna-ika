@@ -1,0 +1,180 @@
+@use 'variables' as v
+
+@keyframes pulse
+    0%
+        box-shadow: 0 0px 0.1rem v.$secondary
+    50%
+        box-shadow: 0 0px 5rem v.$secondary
+    100%
+        box-shadow: 0 0px 0.1rem v.$secondary
+
+=keyframes($name)
+    @-webkit-keyframes #{$name}
+        @content
+    @-moz-keyframes #{$name}
+        @content
+    @-ms-keyframes #{$name}
+        @content
+    @keyframes #{$name}
+        @content
+
+.menu
+    color: v.$gray3
+    z-index: 10
+
+    position: fixed
+    top: 0
+    right: 0
+
+    display: flex
+    flex-direction: column
+    align-content: center
+    justify-content: center
+
+    &.active
+        .icon
+            color: v.$gray5
+            background: v.$gradient-transparent
+            outline: solid 0px v.$transparent
+            animation: none
+            box-shadow: 0 2px 6px v.$transparent
+
+    .icon
+        position: fixed
+        top: 0
+        right: 0
+        transition: 1s
+        cursor: pointer
+
+        width: fit-content
+        height: fit-content
+
+        display: flex
+        align-content: center
+        justify-content: center
+        border-radius: 0 0 0 100%
+
+        color: v.$gray2
+        font-size: 4rem
+        padding: 5vh 5vh 5rem 5rem
+        background: v.$gradient
+        outline: solid 1px v.$gray5
+
+        box-shadow: 0 2px 6px black
+
+        animation:
+            name: pulse
+            duration: 2s
+            timing-function: ease-in-out
+            iteration-count: infinite
+            delay: 10s
+
+        &:hover
+            transition: .2s
+            color: v.$secondary
+            outline: solid 1px v.$secondary
+            box-shadow: 0 2px 6px black
+            animation: none
+
+            .logo
+                svg
+                    transition: .2s
+                    fill: v.$secondary
+
+        .logo
+            position: relative
+            width: 64px
+            height: 64px
+
+            svg
+                transition: 1s
+                fill: v.$primary
+                position: absolute
+                right: 0
+                top: 0
+                height: auto
+                width: 80px
+
+    &.inactive
+        .container
+            opacity: 0
+            transform: translateX(30vw)
+
+    .container
+        z-index: -1
+
+        width: 30vw
+        height: 100vh
+        padding: 0 0 5vh 0
+        transition: 1s
+
+        font:
+            family: v.$barlow-condensed
+            weigth: 100
+            size: clamp(1rem, 4vw, 3rem)
+
+        text-transform: uppercase
+
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        justify-content: flex-end
+
+        background: v.$gradient-line
+        transform: translateX(0rem)
+
+        .list
+            display: flex
+            flex-direction: column
+            gap: 2vh
+            width: 100%
+
+            padding-bottom: 2vh
+            a
+                width: content
+                transition: .7s
+
+                padding-right: 5vh
+                display: flex
+                justify-content: flex-end
+
+                text-align: right
+                color: v.$gray1
+                text-decoration: none
+
+                &:hover
+                    transition: .1s
+                    color: v.$secondary
+                    text-shadow: 0 0 2rem v.$secondary
+
+            .inactive
+                cursor: auto
+                color: v.$gray6
+                text-shadow: 0 0 0 v.$transparent
+
+        .credits
+            width: fit-content
+            font-size: 1rem
+            display: flex
+            justify-content: flex-end
+            letter-spacing: 1px
+            padding-right: 5vh
+            padding-top: 2vh
+
+            color: v.$gray4
+            border-top: solid 1px v.$gray6
+
+            a
+                transition: .3s
+                padding: 0 .5rem
+                text-decoration: none
+                color: v.$primary
+
+                &:hover
+                    color: v.$secondary
+
+.close-menu
+    z-index: 0
+    width: 100vw
+    height: 100vh
+    position: fixed

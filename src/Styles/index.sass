@@ -1,0 +1,148 @@
+@use 'variables' as v
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.page
+    position: relative
+
+body
+    width: 100%
+    height: 100vh
+    position: relative
+
+    color: v.$gray1
+    font-family: v.$barlow
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    background-color: v.$gray9
+
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: non
+    -ms-user-select: none
+    user-select: none
+
+.mute
+    color: v.$gray4
+
+    font:
+        family: v.$barlow-condensed
+        size: 1rem
+    letter-spacing: 1px
+    text:
+        transform: uppercase
+
+.img-fit
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.hide
+    transition: 1s
+    opacity: 0
+
+.show
+    transition: 1s
+    opacity: 1
+
+.uppercase
+    text-transform: uppercase
+
+.capitalize
+    text-transform: capitalize
+
+// ---------------------------------
+// ---------------------------------
+// ---------------------------------
+
+.page-container
+    width: 100vw
+    height: 100vh
+
+    oveflow: hidden
+
+    display: flex
+    flex-direction: column
+
+    .title
+        position: fixed
+        top: 5vh
+        left: 5vh
+        color: v.$primary
+        font:
+            size: clamp(2rem, 15vw, 10rem)
+            family: v.$barlow-condensed
+            weight: 100
+        text-transform: uppercase
+
+    .page-description
+        z-index: 3
+        padding: 5vh
+        .content
+            padding: 1.5rem 2.5rem
+            width: min(60vh, 100vw)
+            transition: 1s
+            border-radius: 1rem
+
+            display: flex
+            justify-content: center
+            flex-direction: column
+            gap: 1rem
+
+            letter-spacing: 1px
+            text-shadow: 0 2px 2px black
+            outline: solid 1px v.$transparent
+
+            p
+                line-height: 1.6rem
+
+            &:hover
+                transition: .3s
+                background: v.$gradient
+                outline: solid 1px v.$gray5
+
+            a
+                transition: 1s
+                color: v.$primary
+                font-weight: 500
+                text-decoration: none
+
+                &:hover
+                    transition: .2s
+                    color: v.$secondary
+
+            .description
+                font-style: italic
+
+            &:hover
+                background: v.$gradient
+
+    .page-background
+        position: fixed
+        z-index: -1
+
+        width: 100%
+        height: 100%
+
+        &::before
+            content: ''
+            width: 100vw
+            height: 100%
+            position: absolute
+            background: rgb(0,0,0)
+            background: linear-gradient(315deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%)
+
+        &.dim
+            transition: 1s
+            opacity: .2
+
+        &.clear
+            transition: 1s
+            opacity: 1

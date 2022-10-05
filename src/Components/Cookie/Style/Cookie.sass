@@ -1,0 +1,222 @@
+@use '../../../Styles/variables' as v
+
+.desc-container
+    display: flex
+    flex-direction: column
+    gap: 2rem
+
+.cookie-container
+    position: fixed
+    top: 5vh
+    left: 5vh
+
+    display: flex
+    flex-direction: column
+    gap: 1rem
+
+    &:hover
+        .party
+            .player
+                .img
+                    box-shadow: inset 0 0 1rem rgb(0,0,0,.6)
+                &.tank
+                    .img
+                        background: v.$tank
+                &.healer
+                    .img
+                        background: v.$healer
+                &.dps
+                    .img
+                        background: v.$dps
+    .all-cookies
+        max-width: 60vw
+        position: absolute
+        width: fit-content
+        z-index: 5
+        top: 2.5rem
+        left: 0
+
+        @include v.flex-centerall
+
+        @include v.gray-box-med
+        
+        opacity: 0
+        &.active
+            opacity: 1
+
+        .cookie
+            width: 10rem
+            @include v.gray-element
+            position: relative
+            &.active
+                @include v.active-box
+            .img
+
+    .index-buttons
+        position: relative
+        height: 32px
+        width: fit-content
+        display: flex
+        border-radius: .5rem
+
+        background: v.$gradient
+
+        button
+            transition: 1s
+            padding: 0 2rem
+            text-transform: uppercase
+            width: fit-content
+
+            display: flex
+            align-items: center
+            justify-content: center
+
+            color: v.$gray4
+            font:
+                family: v.$barlow-condensed
+            letter-spacing: 1px
+            background: none
+            border: none
+
+            &:hover
+                cursor: pointer
+                transition: .2s
+
+                color: v.$secondary
+
+            &.btn-1
+                font-size: 1.3rem
+                border: solid 1px v.$gray6
+                border-radius: .5rem 0 0 .5rem
+                &:hover
+                    z-index: 1
+                    outline: solid 1px v.$secondary
+                    background: v.$gradient
+
+            &.btn-2
+                border-top: solid 1px v.$gray6
+                border-bottom: solid 1px v.$gray6
+
+                &:hover
+                    z-index: 1
+                    outline: solid 1px v.$secondary
+                    background: v.$gradient
+
+            &.btn-3
+                font-size: 1.3rem
+                border: solid 1px v.$gray6
+                border-radius: 0 .5rem .5rem 0
+                &:hover
+                    z-index: 1
+                    outline: solid 1px v.$secondary
+                    background: v.$gradient
+
+.duty
+    width: fit-content
+    padding: .5rem 1rem
+    border-radius: .5rem
+
+    display: flex
+    gap: 1rem
+    align-items: center
+
+    color: v.$gray3
+    font-family: v.$barlow-condensed
+    text-transform: uppercase
+    letter-spacing: 1px
+
+    background: v.$gradient-light
+    outline: solid 1px v.$gray6
+
+    .date
+        padding-right: 1rem
+        border-right: solid 1px v.$gray5
+
+    .tag
+        padding-left: 1rem
+        font-size: .8rem
+
+        color: v.$gray4
+        border-left: solid 1px v.$gray5
+
+        &.normalraid
+            color: v.$gray3
+        &.savageraid
+            color: v.$primary
+        &.ultimate
+            color: v.$secondary
+
+.party
+    display: flex
+    gap: 1rem
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content: flex-start
+
+    max-width: 80vw
+
+    .player
+        transition: 1s
+        display: flex
+        align-items: center
+        justify-content: flex-start
+
+        background: v.$gradient-light
+        outline: solid 1px v.$gray6
+        border-radius: .5rem
+
+        overflow: hidden
+
+        &:hover
+            transition: .2s
+
+            color: v.$secondary
+            background: v.$gradient
+            outline: solid 1px v.$secondary
+            &.tank
+                .img
+                    transition: .2s
+                    background: v.$tank
+
+            &.healer
+                .img
+                    transition: .2s
+                    background: v.$healer
+
+            &.dps
+                .img
+                    transition: .2s
+                    background: v.$dps
+
+            .img
+                outline: solid 1px v.$secondary
+                box-shadow: inset 0 0 1rem rgb(0,0,0,.6)
+
+        .img
+            transition: 1s
+            z-index: 0
+            width: 2rem
+            height: 2rem
+
+            outline: solid 1px v.$transparent
+            box-shadow: inset 0 0 1rem rgb(0,0,0,0)
+
+            display: flex
+            align-items: center
+            justify-content: center
+
+            img
+                z-index: 1
+                width: 1.5rem
+                height: auto
+
+                filter: drop-shadow(0 2px 2px v.$shadow-dark)
+
+        .name
+            padding: .2rem 1rem
+
+            text-shadow: 0 2px 2px v.$shadow-dark
+
+            display: flex
+            align-items: center
+            justify-content: flex-start

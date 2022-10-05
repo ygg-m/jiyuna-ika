@@ -1,0 +1,25 @@
+#home .logo {
+  padding: 5vh;
+  width: min(80vh, 100vw);
+  height: 100%;
+  filter: drop-shadow(0 0.5rem 1rem black);
+}
+#home .logo svg {
+  fill: #C81B10;
+}
+#home .logo p {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: clamp(1rem, 4vw, 1.6rem);
+  font-family: "Barlow Condensed", sans-serif;
+}
+#home .page-description .content p {
+  display: flex;
+  gap: 1rem;
+  width: content;
+}
+#home .page-description .content .description {
+  font-style: italic;
+}/*# sourceMappingURL=Home.css.map */
