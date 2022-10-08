@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/jiyuna-ika/static/css/main.b5834739.css",
+    "main.js": "/jiyuna-ika/static/js/main.029a0275.js",
+    "static/js/787.3a871723.chunk.js": "/jiyuna-ika/static/js/787.3a871723.chunk.js",
+    "static/media/logo-jiyuna-ika.svg": "/jiyuna-ika/static/media/logo-jiyuna-ika.ddac6a31c7665223f1a246b871c49bb7.svg",
+    "index.html": "/jiyuna-ika/index.html",
+    "main.b5834739.css.map": "/jiyuna-ika/static/css/main.b5834739.css.map",
+    "main.029a0275.js.map": "/jiyuna-ika/static/js/main.029a0275.js.map",
+    "787.3a871723.chunk.js.map": "/jiyuna-ika/static/js/787.3a871723.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5834739.css",
+    "static/js/main.029a0275.js"
+  ]
+}

@@ -1,4 +1,4 @@
-gitimport React from "react";
+import React from "react";
 import { AboutProvider } from "./index";
 import { AboutContainer } from "./container";
 
